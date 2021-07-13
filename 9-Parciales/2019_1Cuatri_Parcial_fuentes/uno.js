@@ -8,7 +8,9 @@ function mostrar()
 {
 	var lado, perime;
 	lado=prompt("Ingrese Valor Para 1 Lado Del Triangulo Equilatero a Calcular");
+	lado=parseFloat(lado);
 	perime=(3*lado);
+	perime=perime.toFixed(2);
 	alert("El Perimetro es " + perime);
 
 

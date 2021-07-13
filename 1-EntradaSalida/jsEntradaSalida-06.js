@@ -13,7 +13,7 @@ numer2=document.getElementById("txtIdNumeroDos").value;
 numer1=parseInt(numer1);
 numer2=parseInt(numer2);
 //ya convertidos en enteros sumamos
-sumatoria= numer1 + numer2;
+sumatoria=numer1+numer2;
 
 
 // mostramos el mensaje con la suma

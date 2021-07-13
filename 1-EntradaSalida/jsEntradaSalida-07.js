@@ -9,38 +9,46 @@ function sumar()
 	var Numero1, Numero2, Resultado;
 	Numero1=parseInt(document.getElementById("txtIdNumeroUno").value);
 	Numero2=parseInt(document.getElementById("txtIdNumeroDos").value);
- 	Resultado = Numero1 + Numero2;
+ 	Resultado=Numero1+Numero2;
 
-	alert("La Suma es " + Resultado);	
+	alert("La Suma es " + Resultado);
+	document.getElementById('txtIdNumeroUno').value = "";
+	document.getElementById('txtIdNumeroDos').value = "";
 }
 
 function restar()
 {
-	var Numero1, Numero2, Resultado2;
+	var Numero1, Numero2, Resultado;
 	Numero1=parseInt(document.getElementById("txtIdNumeroUno").value);
 	Numero2=parseInt(document.getElementById("txtIdNumeroDos").value);
-	Resultado2 = Numero1 - Numero2;
+	Resultado=Numero1-Numero2;
 
-	alert("La Resta es " + Resultado2);	
+	alert("La Resta es " + Resultado);
+	document.getElementById('txtIdNumeroUno').value = "";
+	document.getElementById('txtIdNumeroDos').value = "";
 }
 
 function multiplicar()
 { 
-	var Numero1, Numero2, Resultado3;
+	var Numero1, Numero2, Resultado;
 	Numero1=parseInt(document.getElementById("txtIdNumeroUno").value);
 	Numero2=parseInt(document.getElementById("txtIdNumeroDos").value);
-	Resultado3 = Numero1 * Numero2;
+	Resultado=Numero1*Numero2;
 
-	alert("La multiplicacion es " + Resultado3);	
+	alert("La multiplicacion es " + Resultado);
+	document.getElementById('txtIdNumeroUno').value = "";
+	document.getElementById('txtIdNumeroDos').value = "";
 }
 
 function dividir()
 {
-	var Numero1, Numero2, Resultado4;
+	var Numero1, Numero2, Resultado;
 	Numero1=parseInt(document.getElementById("txtIdNumeroUno").value);
 	Numero2=parseInt(document.getElementById("txtIdNumeroDos").value);
-	Resultado4 = Numero1 / Numero2;
+	Resultado=Numero1/Numero2;
 
-	alert("La Division es " + Resultado4);	
+	alert("La Division es " + Resultado);
+	document.getElementById('txtIdNumeroUno').value = "";
+	document.getElementById('txtIdNumeroDos').value = "";
 }
 

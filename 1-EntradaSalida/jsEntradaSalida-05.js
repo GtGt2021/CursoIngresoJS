@@ -10,13 +10,14 @@ function mostrar()
 	//Tomamos los valores desde las cajas de texto
 	nombre=document.getElementById("txtIdNombre").value;
 	edad=document.getElementById("txtIdEdad").value;
+	edad=parseInt(edad);
 //concatenamos el mensaje para que llegue como se nos pidio
-	mensaje = "Usted se llama " + nombre;
-	mensaje = mensaje + " y tiene ";
-	mensaje = mensaje + edad;
-	mensaje = mensaje + " años"
+	mensaje="Usted se llama " + nombre;
+	mensaje=mensaje + " y tiene ";
+	mensaje=mensaje + edad;
+	mensaje=mensaje + " años";
 //mostramos el mensaje
-	alert(mensaje)
+	alert(mensaje);
 	}
 
 

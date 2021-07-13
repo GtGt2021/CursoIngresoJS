@@ -6,7 +6,7 @@ function mostrar()
 	//Declaramos Variable
 	var ApellidoPaterno;
 	//Pedimos al Usuario con prompt la info
-	ApellidoPaterno=prompt ("Indique Su Apellido Paterno");
+	ApellidoPaterno=prompt("Indique Su Apellido Paterno");
 	//mostramos el Alert como se nos pide
 	alert(ApellidoPaterno);
 }

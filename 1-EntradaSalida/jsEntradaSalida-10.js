@@ -1,30 +1,35 @@
 /*
 Debemos lograr tomar el importe por ID.
 Transformarlo a entero (parseInt), luego
-mostrar el importe con un Descuento del 25 %
+mostrar el importe con un descuento del 25 %
 en el cuadro de texto "RESULTADO"*/
 function mostrarAumento()
 {
 	
-	var Precio;
+	/*var precio, mensaje;
  	
- 	Precio=parseInt(document.getElementById("txtIdImporte").value);
-   	Precio=(Precio*0.75);
+ 	precio=parseFloat(document.getElementById("txtIdImporte").value);
+   	precio=(precio*0.75);
+   	precio=precio.toFixed(2);
+   	mensaje=("El Nuevo Precio Luego del Descuento Es $" + precio);
   	
- 	document.getElementById("txtIdResultado").value=Precio;
+ 	document.getElementById("txtIdResultado").value=mensaje;*/
 
 
 
 
 
-	/*var Precio, Porcentaje, Descuento;
+	var precio, descuento, mensaje;
  	
- 	Precio=parseInt(document.getElementById("txtIdImporte").value);
- 	Descuento=prompt("Ingrese el Porcentaje a Descontar");
-  	Descuento=(Precio*Descuento);
-  	Descuento=(Descuento/100);
-  	Descuento=Precio - Descuento;
+ 	precio=parseFloat(document.getElementById("txtIdImporte").value);
+ 	porcentaje=prompt("Ingrese el porcentaje a Descontar");
+ 	porcentaje=parseFloat(porcentaje);
+  	descuento=(precio*porcentaje);
+  	descuento=(descuento/100);
+  	descuento=precio-descuento;
+  	descuento=descuento.toFixed(2);
+  	mensaje=("El nuevo precio del articulo con el " + porcentaje + "% de descuento es de $" + descuento); 
 
- 	document.getElementById("txtIdResultado").value=Descuento;*/
+ 	document.getElementById("txtIdResultado").value=mensaje;
 
 }
