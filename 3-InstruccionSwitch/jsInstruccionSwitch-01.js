@@ -1,6 +1,6 @@
 /*
 Gustavo Vargas
-Switvh 1
+Switch 01
 al seleccionar un mes informar.
 si es Enero: "que comiences bien el año!!!."
 si es Marzo: "a clases!!!."

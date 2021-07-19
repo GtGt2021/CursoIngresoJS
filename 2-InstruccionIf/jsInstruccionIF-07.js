@@ -12,5 +12,4 @@ function mostrar()
 		alert('Es muy pequeño para NO ser soltero');
 	}
 
-
 }

@@ -44,20 +44,4 @@ function mostrar()
 		alert("Es una hora invalida");
 	}
 
-	/*
-		if (hora>=0 && hora <=24){
-		if (hora>=7 && hora<=11){
-			alert("Es de mañana.");
-		}else {
-			if (hora>=12 && hora<=19) {
-				alert("Es de tarde.");
-			}else {
-				alert("Es de noche.");
-			}
-		}
-
-	}else{
-		alert("Usted introdujo una hora invalida");
-	}
-*/
 }
