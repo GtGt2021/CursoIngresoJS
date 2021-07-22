@@ -14,36 +14,48 @@ destino=document.getElementById("txtIdDestino").value;
 
 switch(temporada){
 	case "Invierno":
-		if (destino=="Bariloche"){
-			porcentaje=1.2;
-		} else{
-			if (destino=="Mar del plata") {
-				porcentaje=.8;
-			}else{
-				porcentaje=.9;
-			}
-		}
+	switch (destino){
+		case "Bariloche":
+		porcentaje=-20;
+		break;
+		case "Cordoba":
+		case "Cataratas":
+		porcentaje=10;
+		break;
+		case "Mar del plata":
+		porcentaje=20;
+		break;
+	}	
 	break;
 	case "Verano":
-		if (destino=="Bariloche"){
-			porcentaje=.8;
-		} else{
-			if (destino=="Mar del plata") {
-				porcentaje=1.2;
-			}else{
-				porcentaje=1.1;
-			}
-		}
+	switch (destino){
+		case "Bariloche":
+		porcentaje=20;
+		break;
+		case "Cordoba":
+		case "Cataratas":
+		porcentaje=-10;
+		break;
+		case "Mar del plata":
+		porcentaje=-20;
+		break;
+	}
 	break;	
 	case "Otoño":
 	case "Primavera":
-		if (destino=="Cordoba"){
-			porcentaje=1;
-		} else{
-			porcentaje=1.1;
-		}
+	switch (destino){
+		case "Bariloche":
+		case "Cataratas":
+		case "Mar del plata":
+		porcentaje=-10;
+		break;
+		case "Cordoba":
+		porcentaje=0;
+		break;
+	}
 	break;	
 }
-precio=precio*porcentaje
+porcentaje=(porcentaje/100)*precio;
+precio=precio-porcentaje;
 alert("El costo del viaje es $" + precio);
 }

@@ -47,7 +47,7 @@ function Responder()
 
 {
 var resultado, usuario;
-usuario=parseFloat(document.getElementById("txtIdRespuesta").value)
+usuario=parseInt(document.getElementById("txtIdRespuesta").value)
 switch (operador){
     case "Sumar":
     resultado=num1+num2;
@@ -63,8 +63,6 @@ switch (operador){
     break;
     case "Dividir":
     resultado=num1/num2;
-    resultado=parseFloat(resultado);
-    resultado=resultado.toFixed(2);
     break;
     console.log(resultado)
 }	

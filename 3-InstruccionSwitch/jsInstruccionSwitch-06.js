@@ -42,6 +42,7 @@ function mostrar()
 		break;
 		default:
 		alert("Es una hora invalida");
+		break;
 	}
 
 }

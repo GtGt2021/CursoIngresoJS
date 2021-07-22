@@ -7,13 +7,32 @@ function mostrar()
 	var respuesta;
 	var sumaPositivos;
 	var multiplicacionNegativos;
+	var banderaMultiplicacion;
+	banderaMultiplicacion=false;
 	contador=0;
 	sumaPositivos=0;
 	multiplicacionNegativos=1;
 	respuesta='si';
 
+	while(respuesta=="si")
+	{
+		numeroIngresado=prompt("Ingresar Numero");
+		numeroIngresado=parseInt(numeroIngresado);
+		if (numeroIngresado>=0) {
+			sumaPositivos=sumaPositivos+numeroIngresado;
+		}else{
+			banderaMultiplicacion=true;
+			multiplicacionNegativos=multiplicacionNegativos*numeroIngresado;
+		}
+		
+		respuesta=prompt("Ingrese (si) para Sumar otro Numero o cualquier otra tecla ir al final");
+	}
+	if (banderaMultiplicacion==false) {
+		multiplicacionNegativos=0;
+	}
 
-	txtIdSuma.value=sumaPositivos;
-	txtIdProducto.value=multiplicacionNegativos;
+	document.getElementById("txtIdSuma").value=("Suma de los positivos "+ sumaPositivos);
+	document.getElementById("txtIdProducto").value=("Multiplicacion Negativos " + multiplicacionNegativos);
 
-}//FIN DE LA FUNCIÓN
+
+}

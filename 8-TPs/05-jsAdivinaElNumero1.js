@@ -17,6 +17,7 @@ function comenzar(){
 	numeroSecreto=numeroSecreto*100;
 	numeroSecreto=parseInt(numeroSecreto);
 	numeroSecreto=numeroSecreto+1;
+	console.log(numeroSecreto)
 }
 
 function verificar(){
@@ -25,6 +26,7 @@ contadorIntentos=contadorIntentos+1;
 numeroPrueba=parseInt(document.getElementById("txtIdNumero").value);
 document.getElementById("txtIdIntentos").value=contadorIntentos;
 
+
 if (numeroPrueba==numeroSecreto) {
 	alert("Usted es Ganador y solo en " + contadorIntentos + " Intentos");
 	document.getElementById("txtIdIntentos").value=("El Numero es " + numeroSecreto + " Intentaste " + contadorIntentos + " Veces");
@@ -32,9 +34,11 @@ if (numeroPrueba==numeroSecreto) {
 	direfencia=numeroSecreto-numeroPrueba;
 	if (direfencia<0) {
 		alert("te pasaste");
+		console.log(direfencia)
 	}
 	else {
 		alert ("te quedastes corto");
+		console.log(direfencia)
 	}
 }
 

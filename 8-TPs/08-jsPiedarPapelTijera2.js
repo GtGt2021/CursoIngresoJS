@@ -22,20 +22,20 @@ function piedra()
 	
 	switch (tirada) {
 		case 1:
-		alert("empates");
+		alert("empate");
 		empates=empates+1;
 		break;
 		case 2:
-		alert("Papel le Gana a piedra");
+		alert("Perdiste: Papel le Gana a piedra");
 		perdidas=perdidas+1;
 		break;
 		case 3:
-		alert("Piedra le Gana a Tijera");
+		alert("Ganaste: Piedra le Gana a Tijera");
 		ganadas=ganadas+1;
 		break;
 	}
-	this.comenzar();
-	this.mostrarResultado();
+	
+	mostrarResultado();
 
 }//FIN DE LA FUNCIÓN
 
@@ -44,7 +44,7 @@ function papel()
 {
 	switch (tirada) {
 		case 1:
-		alert("Papel le Gana a piedra");
+		alert("Ganaste: Papel le Gana a piedra");
 		ganadas=ganadas+1;
 		break;
 		case 2:
@@ -52,12 +52,12 @@ function papel()
 		empates=empates+1;
 		break;
 		case 3:
-		alert("Tijera le Gana a Papel");
+		alert("Perdiste: Tijera le Gana a Papel");
 		perdidas=perdidas+1;
 		break;
 	}
-	this.comenzar();
-	this.mostrarResultado();
+	
+	mostrarResultado();
 
 }//FIN DE LA FUNCIÓN
 
@@ -66,11 +66,11 @@ function tijera()
 {
 	switch (tirada) {
 		case 1:
-		alert("Piedra Gana a Tijera");
+		alert("Perdiste: Piedra Gana a Tijera");
 		perdidas=perdidas+1
 		break;
 		case 2:
-		alert("Tijera Gana a Papel");
+		alert("Ganaste: Tijera Gana a Papel");
 		ganadas=ganadas+1
 		break;
 		case 3:
@@ -78,14 +78,15 @@ function tijera()
 		empates=empates+1;
 		break;
 	}
-	this.comenzar();
-	this.mostrarResultado();
+	
+	mostrarResultado();
 
 }
 
 function mostrarResultado()
 {
-	document.getElementById("txtIdEmpatadas").value=empates;
-	document.getElementById("txtIdPerdidas").value=perdidas;
-	document.getElementById("txtIdGanadas").value=ganadas;
+	document.getElementById("txtIdEmpatadas").value=("empatadas: " +empates);
+	document.getElementById("txtIdPerdidas").value=("Perdidas: " +perdidas);
+	document.getElementById("txtIdGanadas").value=("Ganadas: " +ganadas);
+	comenzar()
 }

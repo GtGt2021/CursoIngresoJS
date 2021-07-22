@@ -1,3 +1,7 @@
+/*
+Gustavo Vargas
+Div J
+Parcial 2019 ej: 5*/
 function mostrar()
 {
 var tipoPago, destino, descuento, total, dias;
@@ -49,6 +53,7 @@ switch (destino){
 	break;
 	default:
 	descuento=-20;
+	break;
 }
 total=dias*100;
 descuento=(descuento/100)*total;

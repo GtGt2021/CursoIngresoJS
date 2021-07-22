@@ -20,6 +20,7 @@ switch (mes){
 	alert("Este mes tiene 30 dias");
 	default:
 	alert("Este mes tiene 31 dias");
+	break;
 }
 
 }

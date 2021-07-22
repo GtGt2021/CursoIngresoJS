@@ -16,6 +16,7 @@ switch (mes){
 	break;
 	default:
 	alert("Este mes tiene mas de 30 dias o mas");
+	break;
 }
 	
 }

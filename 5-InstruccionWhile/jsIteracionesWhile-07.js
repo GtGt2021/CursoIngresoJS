@@ -9,10 +9,16 @@ function mostrar()
 	var respuesta;
 	contador=0;
 	acumulador=0;
-	respuesta='si';
+	respuesta="si";
+	while(respuesta=="si")
+	{
+		numeroIngresado=prompt("Ingresar Numero a promediar");
+		numeroIngresado=parseInt(numeroIngresado);
+		acumulador=acumulador+numeroIngresado;
+		contador=contador+1;
+		respuesta=prompt("Ingrese (si) para Sumar otro Numero o cualquier otra tecla para promediar");
+	}
 
-
-	txtIdSuma.value=acumulador;
-	txtIdPromedio.value=acumulador/contador;
-
-}//FIN DE LA FUNCIÓN
+	document.getElementById("txtIdSuma").value=("Suma Acumulada "+ acumulador);
+	document.getElementById("txtIdPromedio").value=("Promedio " + acumulador/contador);
+}
