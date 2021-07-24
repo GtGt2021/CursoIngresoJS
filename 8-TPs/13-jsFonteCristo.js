@@ -1,13 +1,117 @@
-/*El departamento de NUMEROS ESPECIALES  del instituto matemático  FonteCristo  nos está pidiendo una aplicación que verifique las distintas cualidades de los números.
+/*El departamento de NUMEROS ESPECIALES  del instituto matemático  FonteCristo  nos está pidiendo una aplicación 
+que verifique las distintas cualidades de los números.
 
 13.	Para cada una de estas acciones  debemos realizar la lógica para verificar las cualidades pedidas:
-a.	Se pedirán un número positivo y se mostrará la cantidad de números pares desde el número ingresado hasta el cero.
-b.	Se pedirán un número positivo y se mostrará la cantidad de números pares desde el número ingresado hasta el cero.
-c.	Se pedirán un número positivo y se mostrará la cantidad de números divisibles de este número que se encuentran desde el 1 al 100.
-d.	Se pedirán un número positivo y se mostrará si el número es un número primo o no.
-e.	Se pedirán un número positivo y se mostrará la cantidad de números Primos desde el número ingresado hasta el cero.
 */
+
+var numeroPositivo;
 function ComenzarIngreso () 
 {
- 	
+	numeroPositivo=document.getElementById("txtIdNumero").value;
+	numeroPositivo=parseInt(numeroPositivo);
+while (numeroPositivo<0){
+	numeroPositivo=prompt("Error en Numero, Ingreselo Nuevamente (Recuerde debe ser Positivo)");
+	numeroPositivo=parseInt(numeroPositivo);
+}
+
+}
+
+
+//Se pedirán un número positivo y se mostrará la cantidad de números pares desde el número ingresado hasta el cero.
+function NumerosPares ()
+{
+	ComenzarIngreso ();
+	var cantidadPares=0;
+	if (numeroPositivo%2==0) {
+			cantidadPares=numeroPositivo/2;	
+			alert("Cantidad Pares Desde el Numero Ingresado a Cero: "+cantidadPares);
+	}else {
+			alert("Numero Impar")
+	}
+
+
+}
+
+
+//Se pedirán un número positivo y se mostrará la cantidad de números impares desde el número ingresado hasta el cero.
+function NumerosImpares ()
+{
+	ComenzarIngreso ();
+	var cantidadImpares;
+	if (numeroPositivo%2==1) {
+			cantidadImpares=numeroPositivo/2+.5;	
+			alert("Cantidad Impares Desde el Numero Ingresado a Cero: " +cantidadImpares);
+	}else {
+			alert("Numero par");
+	}
+
+}
+
+
+//Se pedirán un número positivo y se mostrará la cantidad de números divisibles de este número que se encuentran desde el 
+//1 al 100.
+function NumerosDivisibles ()
+{
+	ComenzarIngreso ();
+	var divisor=1;
+	var contadorDivisible=0;
+	while  (divisor<(numeroPositivo/2) && divisor<=100){
+		if (numeroPositivo%divisor==0) {
+			contadorDivisible=contadorDivisible+1;
+			console.log(numeroPositivo%divisor);
+		}
+	divisor=divisor+1;
+	console.log(divisor);
+	}
+alert("el numero "+numeroPositivo+" es divisible entre " +contadorDivisible+ "numeros");
+
+}
+
+
+//Se pedirán un número positivo y se mostrará si el número es un número primo o no.
+function VerificarPrimo ()
+{
+	ComenzarIngreso ();
+	var divisor=2;
+	var banderaPrimo=true;
+	while (divisor<numeroPositivo && banderaPrimo==true){ 
+		if (numeroPositivo%divisor==0) {
+			banderaPrimo=false;
+		}else{
+			divisor=divisor+1;
+		}
+	}
+if (banderaPrimo==false) {
+	alert("No Es Primo");
+} else {
+	alert("Es Primo");
+}
+}
+
+
+//Se pedirán un número positivo y se mostrará la cantidad de números Primos desde el número ingresado hasta el cero.
+function NumerosPrimos() 
+{
+	ComenzarIngreso ();
+	var divisor=2;
+	var banderaPrimo=true;
+	var contadorPrimos=0;
+	while (divisor<numeroPositivo && banderaPrimo==true){ 
+		if (numeroPositivo%divisor==0) {
+			banderaPrimo=false;
+			console.log(banderaPrimo);
+			console.log(divisor);
+		}else{
+			divisor=divisor+1;
+			console.log(divisor);
+		}
+		/*if (divisor==numeroPositivo-1 && banderaPrimo==true){
+			contadorPrimos=contadorPrimos+1;
+			divisor=2;
+			numeroPositivo=numeroPositivo-2;
+		}*/
+		console.log("nuevo bucle");
+	}
+alert(contadorPrimos);
+
 }

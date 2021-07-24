@@ -7,8 +7,6 @@ var num1, num2, operador;
 var segundos=0;
 function comenzar()
 {
-   
-    setInterval(sumarSegundo,1000);
     num1=Math.random();
     num1=num1*10;
     num1=parseInt(num1);
@@ -36,7 +34,7 @@ switch (operador){
     break;
     default:
     operador="Dividir";
-    
+    break;
 }
 
 document.getElementById("txtIdPrimerNumero").value=num1;
@@ -49,7 +47,7 @@ function Responder()
 {
 var resultado, usuario;
 usuario=parseInt(document.getElementById("txtIdRespuesta").value)
-switch (operador){
+    switch (operador){
     case "Sumar":
     resultado=num1+num2;
     console.log(resultado)
@@ -64,22 +62,17 @@ switch (operador){
     break;
     case "Dividir":
     resultado=num1/num2;
+    resultado=parseInt(resultado);
+    console.log(resultado);
     break;
-    console.log(resultado)
 }   
 
-if (usuario==resultado) {
-    alert("Felicidades Lo hiciste Bien\n La Respusta Correcta es " + resultado);
-} else {
-    alert("Intentalo Nuevamente\n La Respusta Correcta es " + resultado);
-}
+    if (usuario==resultado){
+        alert("Felicidades Lo hiciste Bien\n La Respusta Correcta es " + resultado);
+    } else {
+        alert("Intentalo Nuevamente\n La Respusta Correcta es " + resultado);
+    }   
 
 comenzar();
-}
-
-function sumarSegundo(){
-    segundos=segundos + 1;
-    if(segundos==6){
-
-    }
+document.getElementById("txtIdRespuesta").value="";
 }
