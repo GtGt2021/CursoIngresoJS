@@ -17,7 +17,6 @@ function comenzar(){
 	numeroSecreto=numeroSecreto*100;
 	numeroSecreto=parseInt(numeroSecreto);
 	numeroSecreto=numeroSecreto+1;
-	console.log(numeroSecreto)
 }
 
 function verificar(){

@@ -12,6 +12,7 @@ function ComenzarIngreso ()
 while (numeroPositivo<0){
 	numeroPositivo=prompt("Error en Numero, Ingreselo Nuevamente (Recuerde debe ser Positivo)");
 	numeroPositivo=parseInt(numeroPositivo);
+	document.getElementById("txtIdNumero").value=numeroPositivo;
 }
 
 }
@@ -63,7 +64,7 @@ function NumerosDivisibles ()
 	divisor=divisor+1;
 	console.log(divisor);
 	}
-alert("el numero "+numeroPositivo+" es divisible entre " +contadorDivisible+ "numeros");
+alert("el numero "+numeroPositivo+" es divisible entre " +contadorDivisible+ " numero incluyendo el 1 (sin incluir el "+numeroPositivo+")");
 
 }
 
@@ -77,14 +78,14 @@ function VerificarPrimo ()
 	while (divisor<numeroPositivo && banderaPrimo==true){ 
 		if (numeroPositivo%divisor==0) {
 			banderaPrimo=false;
-		}else{
+		} else {
 			divisor=divisor+1;
 		}
 	}
-if (banderaPrimo==false) {
-	alert("No Es Primo");
-} else {
+if (banderaPrimo==true && numeroPositivo!=1) {
 	alert("Es Primo");
+	} else {
+	alert("no Es Primo");
 }
 }
 
@@ -96,22 +97,27 @@ function NumerosPrimos()
 	var divisor=2;
 	var banderaPrimo=true;
 	var contadorPrimos=0;
-	while (divisor<numeroPositivo && banderaPrimo==true){ 
-		if (numeroPositivo%divisor==0) {
-			banderaPrimo=false;
-			console.log(banderaPrimo);
-			console.log(divisor);
-		}else{
-			divisor=divisor+1;
-			console.log(divisor);
-		}
-		/*if (divisor==numeroPositivo-1 && banderaPrimo==true){
-			contadorPrimos=contadorPrimos+1;
-			divisor=2;
-			numeroPositivo=numeroPositivo-2;
-		}*/
-		console.log("nuevo bucle");
-	}
-alert(contadorPrimos);
+	
 
+	while (numeroPositivo>0){
+
+		while (divisor<numeroPositivo && banderaPrimo==true){ 
+			if (numeroPositivo%divisor==0) {
+				banderaPrimo=false;
+			} else {
+				divisor=divisor+1;
+			}
+		}
+
+		if (banderaPrimo==true && numeroPositivo!=1){
+			contadorPrimos=contadorPrimos+1;
+			console.log("primo encontrado: "+numeroPositivo);
+		} else {
+			banderaPrimo=true;
+		}
+
+		numeroPositivo=numeroPositivo-1;
+		divisor=2;
+	}
+	alert(contadorPrimos);
 }

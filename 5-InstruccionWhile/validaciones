@@ -1,0 +1,41 @@
+	
+	VALIDACION SEXO:
+	var sexoIngresado;
+	sexoIngresado=prompt("Ingrese su Sexo\n f para femenino\n m para masculino.");
+	while(sexoIngresado!="f" && sexoIngresado!="m")
+	{
+		sexoIngresado=prompt("Sexo Invalido, Ingrese f o m")
+		//F O M  PARA SALIR DEL WHILE
+
+	}
+
+	while (respuesta=="s" || respuesta=="S"){
+
+		// para continuar en el bucle
+	 respuesta=("Respuesta (S) o (s), para ingresas mas datos")
+	}
+
+	
+	VALIDACION NUMEROS
+	var numeroIngresado;
+	numeroIngresado=prompt("ingrese un número entre 0 y 10.");
+	numeroIngresado=parseInt(numeroIngresado);
+	while(numeroIngresado<0 || numeroIngresado>=10)
+	{
+		numeroIngresado=prompt("Error, ingrese un número entre 0 y 10.");
+	}
+
+document.write('<br>'," ");
+
+descuento=(descuento/100)*total;
+total=total-descuento;
+
+switch (hora){
+		case 7:
+		case 8:
+		case 9:
+		case 10:
+		case 11:
+		alert("Es de Mañana");
+		break;
+	}

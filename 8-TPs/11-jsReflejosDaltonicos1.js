@@ -40,10 +40,6 @@ function comenzar()
 
 function Responder(colorParametro)
 {
-	if (Responder('amarillo')=="amarillo") {
-		alert("Excelente");
-	} else {
-		alert("te equivocaste intentalo de nuevo");
-	}
-	
+	Responder('marron')
+    alert("Correcto")	
 }//FIN DE LA FUNCIÓN

@@ -1,7 +1,11 @@
 function mostrar()
 {
-	alert("ok");
+	
+	for (var i=1; i<=10; i++){
+	document.write('<br>',"Hola UTN FRA");
+	if (i==5) {
+		break;
+	}
+	}
 
-
-
-}//FIN DE LA FUNCIÓN
+}
